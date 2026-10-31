@@ -304,7 +304,7 @@ function cloudMessage(msg,isError=false){
  if(el){el.textContent=msg;el.style.background=isError?'#fff0f0':'#eef4ff';el.style.color=isError?'#a21d1d':'#234'}
 }
 async function cloudRequest(payload){
-const response=await fetch(SYNC_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','apikey':'sb_publishable_6ulWzqXRr2A2a5_AaZI5xQ_E0Ei2oOr'},body:JSON.stringify(payload)});
+const response=await fetch(SYNC_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(payload)});
  let result={};try{result=await response.json()}catch(_){}
  if(!response.ok)throw new Error(result.error||('Error HTTP '+response.status));
  return result;
