@@ -297,7 +297,7 @@ const $=id=>document.getElementById(id), STORAGE_KEY='turnos4x4_test_v2';
 // La sincronización se hace en segundo plano con una Edge Function. La clave de
 // servicio de Supabase NUNCA debe colocarse aquí ni en GitHub.
 const SUPABASE_URL = 'https://koiobaywiqiahibxeecd.supabase.co';
-const SYNC_ENDPOINT = SUPABASE_URL + '/functions/v1/calendar-sync';
+const SYNC_ENDPOINT = SUPABASE_URL + '/functions/v1/calendar-zync';
 let cloudSaveTimer=null, cloudReady=false, cloudLoading=false, cloudLastState=null;
 function cloudMessage(msg,isError=false){
  const el=document.getElementById('cloudStatus');
